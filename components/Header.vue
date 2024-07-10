@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-4 items-center py-1">
+  <div class="flex gap-4 items-center py-1 relative z-10">
     <Logo class="pb-1"/>
     <ThemeSwitcher class="ml-4"/>
   </div>

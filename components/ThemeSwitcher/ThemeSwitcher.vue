@@ -1,15 +1,21 @@
 <template>
-  <div class="flex gap-4 items-center">
+  <div class="flex themeSwitcher gap-4 items-center">
     <div class="uppercase">
       Тема
     </div>
-    <div class="flex items-center gap-3">
-      <button v-for="theme in themes" @click="setTheme(theme)" :class="theme" >
-        <ThemeSwitcherBox :isActive="theme === activeTheme"/>
+    <div>
+      <ThemeSwitcherBox :isActive="true" :class="activeTheme"/>
+    </div>
+    <div class="flex items-center overflow-hidden themeSwitcher-items">
+      <button v-for="theme in themes" @click="setTheme(theme)"
+              :class="`${theme} ${theme === activeTheme ? 'w-0' : ''}`"
+              class="overflow-hidden"
+      >
+        <ThemeSwitcherBox :isActive="theme === activeTheme" class="mr-3"/>
       </button>
     </div>
 
-    <div class="w-[32px] h-[32px] bg-primary rounded-full center cursor-pointer">
+    <div class="w-[32px] h-[32px] bg-primary rounded-full center cursor-pointer themeSwitcher-arrow">
       <ArrowBack class="fill-bg"/>
     </div>
     <Button class="font-medium font2">
@@ -36,10 +42,30 @@ const activeTheme = useStorage('theme', 'main')
 const themes = [
   'main',
   'dark',
+  'dark-grey',
+  'orange-red',
   'theme-blue'
 ]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.themeSwitcher{
 
+  &-items{
+    width: 0px;
+    transition: width .4s ease-in-out;
+  }
+  &-arrow{
+    transition: transform .4s ease-in-out;
+  }
+
+  &:hover{
+    .themeSwitcher-arrow{
+      transform: rotate(180deg);
+    }
+    .themeSwitcher-items{
+      width: 160px;
+    }
+  }
+}
 </style>

@@ -29,3 +29,19 @@
   --background-color: #EFF6FF;
   --text-color: #1E40AF;
 }
+
+.orange-red {
+  --primary-color: #ff6b35; /* Оранжевый */
+  --primaryDark: #d95d2c;   /* Темный оранжевый */
+  --secondary-color: #ee964b; /* Светло-оранжевый */
+  --background-color: #2d2727; /* Темный фон */
+  --text-color: #ffffff;      /* Белый текст */
+}
+
+.dark-grey {
+  --primary-color: #404b67;   /* Серый */
+  --primaryDark: #4b5563;     /* Темный серый */
+  --secondary-color: #9ca3af; /* Светло-серый */
+  --background-color: #edf2ff; /* Темно-серый фон */
+  --text-color: #f9fafb;      /* Белый текст */
+}
