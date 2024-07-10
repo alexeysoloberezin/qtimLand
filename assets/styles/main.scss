@@ -1,0 +1,73 @@
+@import "themes";
+@import "vars";
+@import "fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: $font ;
+  line-height: 1.1;
+}
+
+.font2{
+  &,*{
+    font-family: $font2;
+    letter-spacing: .5px;
+  }
+}
+.app{
+  padding: 25px;
+}
+
+/* Tailwind Overrides */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.text-background{
+  color: var(--background-color)
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-background {
+  background-color: var(--background-color);
+}
+
+.text-text {
+  color: var(--text-color);
+}
+
+.fill-primary {
+  &, * {
+    fill: var(--primary-color);
+  }
+}
+
+.fill-bg {
+  &, * {
+    fill: var(--background-color);
+  }
+}
+
+.center{
+  @apply flex items-center justify-center;
+}
+
+
+@layer components {
+  body {
+    @extend .text-primary;
+  }
+}
