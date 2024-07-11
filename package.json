@@ -9,11 +9,20 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "overrides": {
+    "vue": "latest"
+  },
   "dependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@pinia/nuxt": "^0.5.1",
     "@vueuse/core": "^10.11.0",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.3",
-    "vue": "latest"
+    "nuxt-socket-io": "^3.0.13",
+    "pinia": "^2.1.7",
+    "socket.io-client": "^4.7.5",
+    "vue": "latest",
+    "vue-3-mask": "^0.0.1-alpha"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

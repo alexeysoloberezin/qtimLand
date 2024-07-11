@@ -68,7 +68,10 @@ body,html{
     transition: fill $transition;
   }
 }
-
+.stroke-primary{
+  stroke: var(--primary-color);
+  transition: stroke $transition;
+}
 .fill-bg {
   &, * {
     fill: var(--background-color);
@@ -130,8 +133,37 @@ img{
   max-width: 100%;
 }
 
+.card{
+  border: 2px solid var(--primary-color);
+  @apply rounded-xl;
+}
 
 .badge{
-  @apply  px-2 py-1 rounded-full;
+  font-size: 15px;
+  @apply  px-3.5 py-1.5 rounded-full w-fit;
   border: 1px solid var(--primary-color);
+  transition: .3s;
+  &:hover{
+    background: var(--secondary-color);
+    color: var(--text-color)
+  }
+  &.active{
+    border-color:  transparent;
+    background: var(--primary-color);
+    color: var(--background-color)
+  }
+}
+
+.border-primary{
+  border: 2px solid var(--primary-color);
+}
+.blockScroll{
+  overflow: hidden;
+  height: 100vh;
+}
+
+.subtitle-lg{
+  font-size: 120px;
+  font-family: $font2;
+  line-height: 0.9;
 }
